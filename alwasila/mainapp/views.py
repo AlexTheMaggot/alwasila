@@ -1,3 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def plug(request):
+    template = 'mainapp/plug.html'
+    return render(request, template)
+
+
+def index(request):
+    template = 'mainapp/index.html'
+    return render(request, template)
