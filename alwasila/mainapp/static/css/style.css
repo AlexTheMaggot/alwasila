@@ -86,9 +86,9 @@ h6 {
 }
 p {
 	color: #989898;
-	font-size: 13px;
+	font-size: 17px !important;
 	line-height: 28px;
-	font-family: 'montserratlight';
+	font-family: 'montserratlight', sans-serif !important;
 }
 a {
 	-webkit-transition: all 0.4s ease-in-out;
