@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{% endblock %}</title>
+<meta name="keywords" content="{% block keywords %}{% endblock %}">
+<meta name="description" content="{% block description %}{% endblock %}">
+<meta name="author" content="AlexTheMaggot">
+
+<!-- FONTS ONLINE -->
+<link href='{% static 'fonts.googleapis.com/css@family=Droid+Serif%253A400,700,400italic,700italic.css' %}' rel='stylesheet' type='text/css'>
+<link href='{% static 'fonts.googleapis.com/css@family=Montserrat%253A400,700.css' %}' rel='stylesheet' type='text/css'>
+
+<!--MAIN STYLE-->
+<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css">
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="{% static 'rs-plugin/css/settings.css' %}" media="screen" />
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+{% block content %}
+{% endblock %}
+<script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/own-menu.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.isotope.min.js' %}"></script>
+<script src="{% static 'js/counter.js' %}"></script>
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+<script type="text/javascript" src="{% static 'rs-plugin/js/jquery.themepunch.tools.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+{% comment %}
+<script type='text/javascript' src='http://maps.google.com/maps/api/js'></script>
+{% endcomment %}
+<!-- begin map script-->
+{% comment %}
+<script type="text/javascript">
+/*==========  Map  ==========*/
+var map;
+function initialize_map() {
+if ($('#map').length) {
+  var myLatLng = new google.maps.LatLng(-37.814199, 144.961560);
+  var mapOptions = {
+    zoom: 17,
+    center: myLatLng,
+    scrollwheel: false,
+    panControl: false,
+    zoomControl: true,
+    scaleControl: false,
+    mapTypeControl: false,
+    streetViewControl: false
+  };
+  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    tittle: 'Envato',
+    icon: './images/map-locator.png'
+
+  });
+} else {
+  return false;
+}
+}
+google.maps.event.addDomListener(window, 'load', initialize_map);
+</script>
+{% endcomment %}
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+<!-- Powered by AlexTheMaggot -->
+</html>
