@@ -192,7 +192,7 @@ section {
 	border-color: #35373e;
 }
 .btn:hover {
-	background: #35373e;
+	background: #927900;
 	color: #fff;
 }
 .btn-1 {
@@ -1237,7 +1237,7 @@ header.main-header nav .ownmenu li {
 	color: #fff;
 }
 .promo {
-	background: #303030;
+	background: #5F4E00;
 }
 .promo h5 {
 	color: #fff;
@@ -1601,7 +1601,7 @@ header.main-header nav .ownmenu li {
 	padding-top: 60px;
 	padding-bottom: 10px;
 	min-height: 200px;
-	background: #3c3c3c;
+	background: #6D5F1B;
 	text-transform: uppercase;
 }
 .footer-up .contact {
@@ -1609,7 +1609,7 @@ header.main-header nav .ownmenu li {
 	padding-top: 80px;
 	padding-bottom: 10px;
 	min-height: 200px;
-	background: #343434;
+	background: #927900;
 }
 .footer-up i {
 	font-size: 40px;
@@ -1804,7 +1804,8 @@ footer .social_icons li a {
 }
 #contact_form li .btn {
 	text-transform: uppercase;
-	background: #222222;
+	background: #927900;
+	border-color: #927900;
 	display: inline-block;
 	margin: 0px;
 	font-size: 12px;
