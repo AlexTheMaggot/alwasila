@@ -1,0 +1,134 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}al Wasila - Контакты{% endblock %}
+{% block keywords %}al Wasila контакты{% endblock %}
+{% block description %}أل وسيلة - al Wasila 2022{% endblock %}
+{% block content %}
+    <!-- Page Wrap -->
+    <div id="wrap">
+      <div id="main-wrapper">
+            {% include 'header.html' %}
+        <!--======= SUB BANNER =========-->
+        <section class="sub-banner">
+          <div class="container">
+            <div class="position-center-center">
+              <h2>Контакты</h2>
+            </div>
+          </div>
+        </section>
+
+        <!--======= MAP =========-->
+          {% comment %}
+        <div id="map"> </div>
+          {% endcomment %}
+
+        <!--======= Contact Section =========-->
+        <section class="sectoion-100px contact contact-page">
+          <div class="container">
+            <!-- Tittle -->
+            <div class="tittle">
+              <h4>Свяжитесь с нами</h4>
+              <p>Можете написать нам или оставить заявку прямо на сайте. Наши операторы свяжутся с вами в ближайшее время</p>
+            </div>
+            <div class="row">
+
+              <!-- Contact Info -->
+              <div class="col-sm-4">
+                <div class="contct-info">
+                  <h5>Контакты</h5>
+                  <ul>
+
+                    <!-- ADDRESS -->
+                    <li class="media">
+                      <div class="media-left">
+                        <div class="icon"> <i class="fa fa-map-marker"></i> </div>
+                      </div>
+                      <div class="media-body">
+                        <h6 class="media-heading">Адрес</h6>
+                        <p>Республика Узбекистан Самаркандская область, Самаркандский район, село Рустам 1 дом 70</p>
+                      </div>
+                    </li>
+
+                    <!-- call -->
+
+                    <li class="media">
+                      <div class="media-left">
+                        <div class="icon"> <i class="fa fa-mobile-phone"></i> </div>
+                      </div>
+                      <div class="media-body">
+                        <h6 class="media-heading">Телефон</h6>
+                        <p>+998 (91) 557-77-70</p>
+                      </div>
+                    </li>
+
+                    <!-- e-mail -->
+                    <li class="media">
+                      <div class="media-left">
+                        <div class="icon"> <i class="fa fa-envelope-o"></i> </div>
+                      </div>
+                      <div class="media-body">
+                        <h6 class="media-heading">e-mail</h6>
+                        <p>info@alwasila.uz</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <div class="contact-form">
+                  <!--======= FORM  =========-->
+                  <form role="form" id="contact_form" class="contact-form" method="post" onSubmit="return false">
+                    <ul class="row">
+                      <li class="col-sm-6">
+                        <label>
+                          <input type="text" class="form-control" name="name" id="name" placeholder="*ИМЯ">
+                        </label>
+                      </li>
+                      <li class="col-sm-6">
+                        <label>
+                          <input type="text" class="form-control" name="email" id="email" placeholder="*E-MAIL">
+                        </label>
+                      </li>
+                      <li class="col-sm-6">
+                        <label>
+                          <input type="text" class="form-control" name="company" id="company" placeholder="НОМЕР ТЕЛЕФОНА">
+                        </label>
+                      </li>
+                      <li class="col-sm-6">
+                        <label>
+                          <input type="text" class="form-control" name="website" id="website" placeholder="ТЕМА СООБЩЕНИЯ">
+                        </label>
+                      </li>
+                      <li class="col-sm-12">
+                        <label>
+                          <textarea class="form-control" name="message" id="message" rows="5" placeholder="*ТЕКСТ СООБЩЕНИЯ"></textarea>
+                        </label>
+                      </li>
+                      <li class="col-sm-12 no-margin">
+                        <button type="submit" value="submit" class="btn" id="btn_submit" onClick="proceed();">Отправить</button>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {% comment %}
+        <!--======= clients-logo =========-->
+        <section class="sectoion-100px promo">
+          <div class="container">
+            <div class="position-center-center">
+              <h5>Do you want to discuss with us?</h5>
+              <a href="contact.html#." class="btn">CONTACT US</a> </div>
+          </div>
+        </section>
+        {% endcomment %}
+
+        <!--======= FOOTER UP =========-->
+        {% include 'footer.html' %}
+      </div>
+    </div>
+    <!-- Wrap End -->
+{% endblock %}
