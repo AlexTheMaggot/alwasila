@@ -9,3 +9,8 @@ def plug(request):
 def index(request):
     template = 'mainapp/index.html'
     return render(request, template)
+
+
+def about(request):
+    template = 'mainapp/about.html'
+    return render(request, template)
