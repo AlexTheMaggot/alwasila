@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Product
 
 
 def plug(request):
@@ -22,5 +23,9 @@ def contacts(request):
 
 
 def product_list(request):
+    products = Product.objects.all()
+    context = {
+        'products': products,
+    }
     template = 'mainapp/product_list.html'
-    return render(request, template)
+    return render(request, template, context)
