@@ -21,57 +21,21 @@
     <section class="sectoion-100px portfolio">
       <div class="container">
         <ul class="port-folio-row no-margin-t folio-simple row col-3">
-
-          <!-- Project 1 -->
-          <li class="item padding-15">
-            <a href="#"> <img src="{% static 'images/port-img-1.jpg' %}" alt="">
-              <!-- Hover Info -->
-            </a>
-            <h6>Название продукта</h6>
-          </li>
-            <li class="item padding-15">
-            <a href="#"> <img src="{% static 'images/port-img-1.jpg' %}" alt="">
-              <!-- Hover Info -->
-            </a>
-            <h6>Название продукта</h6>
-          </li>
-            <li class="item padding-15">
-            <a href="#"> <img src="{% static 'images/port-img-1.jpg' %}" alt="">
-              <!-- Hover Info -->
-            </a>
-            <h6>Название продукта</h6>
-          </li>
-            <li class="item padding-15">
-            <a href="#"> <img src="{% static 'images/port-img-1.jpg' %}" alt="">
-              <!-- Hover Info -->
-            </a>
-            <h6>Название продукта</h6>
-          </li>
-            <li class="item padding-15">
-            <a href="#"> <img src="{% static 'images/port-img-1.jpg' %}" alt="">
-              <!-- Hover Info -->
-            </a>
-            <h6>Название продукта</h6>
-          </li>
-            <li class="item padding-15">
-            <a href="#"> <img src="{% static 'images/port-img-1.jpg' %}" alt="">
-              <!-- Hover Info -->
-            </a>
-            <h6>Название продукта</h6>
-          </li>
-            <li class="item padding-15">
-            <a href="#"> <img src="{% static 'images/port-img-1.jpg' %}" alt="">
-              <!-- Hover Info -->
-            </a>
-            <h6>Название продукта</h6>
-          </li>
-
+            {% for product in products %}
+                  <!-- Project 1 -->
+                    <li class="item padding-15">
+                    <img src="{{ product.img.url }}" alt="">
+                      <!-- Hover Info -->
+                    <h6>{{ product.name }}</h6>
+                  </li>
+            {% endfor %}
         </ul>
 
-
+        {% comment %}
         <div class="text-center">
             <a href="portfolio-2.html#." class="btn"> see more works</a>
         </div>
+        {% endcomment %}
       </div>
     </section>
 
