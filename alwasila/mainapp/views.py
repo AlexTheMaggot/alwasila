@@ -19,3 +19,8 @@ def about(request):
 def contacts(request):
     template = 'mainapp/contacts.html'
     return render(request, template)
+
+
+def product_list(request):
+    template = 'mainapp/product_list.html'
+    return render(request, template)
